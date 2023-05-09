@@ -10,7 +10,7 @@ RSpec.describe do
         cards = [card_1, card_2, card_3]
         deck = Deck.new(cards)
 
-        
+        expect(deck.cards).to eq(cards)
     end
 
     it "will count the cards" do
@@ -29,8 +29,7 @@ RSpec.describe do
         card_3 = Card.new("What is the 4th planet from the sun?", "Mars", :STEM)
         cards = [card_1, card_2, card_3]
         deck = Deck.new(cards)
-        cards_test = [card_1, card_3]
 
-        expect(deck.cards_in_category(:STEM)).to be eq(cards_test)
+        expect(deck.cards_in_category(:STEM)).to eq([card_1, card_3])
     end
 end
