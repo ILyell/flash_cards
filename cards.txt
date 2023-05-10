@@ -1,0 +1,4 @@
+What is the closest planet to the sun?, Mercury, :STEM
+What is the capital of Alaska?, Juneau", :Geography
+What is the 4th planet from the sun?, Mars, :STEM
+What is the capital of Louisiana?, Baton Rouge, :Geography
