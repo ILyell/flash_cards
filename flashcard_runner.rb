@@ -3,13 +3,8 @@ require "./lib/deck"
 require "./lib/card"
 require "./lib/turn"
 
+
 cards = []
-
-File.foreach("cards.txt") do |line|
-    split_line = line.split(",")
-    cards << Card.new((split_line[0].to_s.strip), (split_line[1].to_s.strip), (split_line[2].to_s.strip))
-end
-
 deck = Deck.new(cards)
 round = Round.new(deck)
 
@@ -35,5 +30,5 @@ cate_uniq = categories.uniq
 
 (cate_uniq.size).times do
     cate = cate_uniq.shift
-    p "#{cate[1..-1]} - #{round.percent_correct_by_category(cate)}"
+    p "#{cate.tr(":","")} - #{round.percent_correct_by_category(cate)}"
 end
